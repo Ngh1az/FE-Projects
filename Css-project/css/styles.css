@@ -1,5 +1,12 @@
 /* typography css */
 /* 10px */
+*,
+*::before
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html {
   font-size: 62.5%; /* 1rem = 10px */
 }
@@ -144,5 +151,55 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+/* button */
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2rem 3rem;
+  border: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 1rem 0;
+  text-align: center;
+}
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+}
+.btn--primary:hover {
+  background: #2584f0db;
+}
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #019fb4db;
+}
+.btn--accent {
+  background: var(--color--accent);
+  color: #fff;
+}
+.btn--accent:hover {
+  background: #f34040db;
+}
+.btn--outline {
+  background: var(--color--heading);
 
+  color: #fff;
+}
+.btn--clock {
+  width: 100%;
+  display: inline-block;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 15px; 
+    padding: 1.5rem 2.5rem;
+  }
 }
